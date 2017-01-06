@@ -1,0 +1,28 @@
+.Nav {
+  @include window-spacing;
+
+  align-items: center;
+  background: $color-black;
+  color: white;
+  display: flex;
+  padding-top: var(--spacing-regular);
+  padding-bottom: var(--spacing-regular);
+}
+
+.Nav-content {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.Nav-brand {
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.Nav-links {
+  display: flex;
+}

@@ -1,0 +1,32 @@
+.Button {
+  align-items: center;
+  background: $color-black;
+  border: 0;
+  box-shadow: 0px 10px 40px 0px rgba(56,57,69,0.2);
+  color: white;
+  display: flex;
+  font-size: $font-size-xsmall;
+  height: 50px;
+  justify-content: center;
+  letter-spacing: 1px;
+  padding: 0 var(--spacing-small);
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+
+  @include media('>=tablet') {
+    font-size: $font-size-regular;
+    height: 60px;
+  }
+}
+
+.Button:hover {
+  box-shadow: 0px 10px 40px 0px rgba(56,57,69,0.4);
+}
+
+.Button:disabled {
+  opacity: .5;
+}
+
+.Button--fullWidth {
+  width: 100%;
+}

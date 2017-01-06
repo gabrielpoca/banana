@@ -1,0 +1,28 @@
+.ChapterMedia {
+  display: flex;
+  flex-direction: column;
+
+  @include media('>=tablet') {
+    flex-direction: row;
+  }
+}
+
+.ChapterMedia-image {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include media('>=tablet') {
+    justify-content: flex-start;
+  }
+}
+
+.ChapterMedia-details {
+  margin-top: $spacing-regular;
+
+  @include media('>=tablet') {
+    margin-top: 0;
+    margin-left: $spacing-regular;
+  }
+}

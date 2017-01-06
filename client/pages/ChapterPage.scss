@@ -1,0 +1,30 @@
+.ChapterPage {
+  background: $color-black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.ChapterPage-pages {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+.ChapterPage-page {
+  margin-bottom: 40px;
+}
+
+.ChapterPage-actions {
+  margin: 0 var(--spacing-regular) var(--spacing-large);
+}
+
+.ChapterPage-title {
+  margin: var(--spacing-large) var(--spacing-regular) $spacing-small;
+}
+
+.ChapterPage-image {
+  max-width: 100%;
+  max-height: 100%;
+}

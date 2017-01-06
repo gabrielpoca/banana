@@ -1,0 +1,16 @@
+.u-spacingSmall {
+  padding-bottom: $spacing-small;
+}
+
+.u-spacingRegular {
+  padding-bottom: $spacing-regular;
+}
+
+.u-spacingLarge {
+  padding-bottom: $spacing-large;
+}
+
+@mixin window-spacing {
+  padding-left: var(--spacing-regular);
+  padding-right: var(--spacing-regular);
+}

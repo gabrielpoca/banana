@@ -1,0 +1,15 @@
+.MangasList {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.MangasList-item {
+  flex-basis: 100%;
+  margin-bottom: var(--spacing-regular);
+
+  @include media('>=tablet') {
+    flex-basis: 200px;
+    margin-right: $spacing-regular;
+  }
+}

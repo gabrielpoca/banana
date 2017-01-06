@@ -1,0 +1,16 @@
+.Cover {
+  box-shadow: 0 10px 40px 0 rgba(56,57,69,0.2);
+  max-width: 200px;
+}
+
+.Cover.Cover--small {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  object-position: center;
+
+  @include media('>=tablet') {
+    height: 200px;
+    width: 200px;
+  }
+}

@@ -1,0 +1,11 @@
+.Footer {
+  @include window-spacing;
+  font-size: $font-size-small;
+  padding-top: $spacing-small;
+  padding-bottom: $spacing-small;
+}
+
+.Footer-content {
+  margin: 0 auto;
+  max-width: $max-width;
+}

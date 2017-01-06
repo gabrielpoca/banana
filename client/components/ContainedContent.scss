@@ -1,0 +1,8 @@
+.ContainedContent {
+  @include window-spacing;
+}
+
+.ContainedContent-content {
+  margin: 0 auto;
+  max-width: $max-width;
+}

@@ -1,0 +1,24 @@
+.Search {
+  display: flex;
+  width: 100%;
+}
+
+.Search-input {
+  background: #F4F5F7;
+  border: 0;
+  flex-grow: 1;
+  font-size: 16px;
+  height: 50px;
+  padding-left: $spacing-regular / 2;
+
+  &::placeholder {
+    color: lighten($color-black, 40%);
+  }
+
+  @include media('>=tablet') {
+    height: 60px;
+  }
+}
+
+.Search-button {
+}

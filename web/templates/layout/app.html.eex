@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Hello Banana!</title>
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  </head>
+
+  <body class="App <%= assigns[:app_modifier] %>">
+    <div class="App-content">
+      <header class="Nav">
+        <div class="Nav-content">
+          <%= link "Decent Manga Reader", to: manga_path(@conn, :index), class: "Nav-brand" %>
+          <nav role="navigation" class="Nav-links">
+            <%= if current_user(@conn) != nil do %>
+              <span><%= current_user(@conn).username %></span>
+              &nbsp;
+              <%= link "(logout)", to: session_path(@conn, :delete), method: :delete %>
+            <% else %>
+              <%= link "Sign in", to: session_path(@conn, :new) %>
+            <% end %>
+          </nav>
+          </div>
+      </header>
+
+      <%= if get_flash(@conn, :info) do %>
+        <div class="Alert Alert--info" role="alert">
+          <p class="Alert-content">
+            <%= get_flash(@conn, :info) %>
+          </p>
+        </div>
+      <% end %>
+
+      <%= if get_flash(@conn, :error) do %>
+        <div class="Alert Alert--error" role="alert">
+          <p class="Alert-content">
+            <%= get_flash(@conn, :error) %>
+          </p>
+        </div>
+      <% end %>
+
+      <main role="main">
+        <%= render @view_module, @view_template, assigns %>
+      </main>
+    </div>
+
+    <div class="App-footer">
+      <footer class="Footer">
+        <div class="Footer-content">
+          maintained by <a href="https://github.com/gabrielpoca" target="_blank">Gabriel Poça</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="<%= static_path(@conn, "/js/index.js") %>"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+html, body {
+  color: #484847;
+  font-family: 'Roboto', sans-serif;
+  font-size: var(--font-size);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}

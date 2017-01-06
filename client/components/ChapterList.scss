@@ -1,0 +1,28 @@
+.ChapterList {
+  list-style-type: none;
+}
+
+[class^=ChapterList-item] {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: $spacing-small;
+}
+
+.ChapterList-link {
+  text-decoration: none;
+  padding-bottom: 1px;
+  border-bottom: 1px solid $color-black;
+}
+
+.ChapterList-item--read::before {
+  content: '';
+  background-image: url('checkmark.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 15px;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  width: 15px;
+  transform: translateY(-50%);
+}

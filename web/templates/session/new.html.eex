@@ -1,0 +1,28 @@
+<div class="ContainedContent">
+  <div class="ContainedContent-content">
+    <div class="u-spacingLarge"></div>
+    <h2 class="Heading">Login</h2>
+    <div class="u-spacingRegular"></div>
+
+    <%= form_for @changeset, session_path(@conn, :create), fn f -> %>
+      <%= label f, :username, class: "control-label" %>
+      <div>
+        <%= text_input f, :username, class: "TextInput" %>
+        <%= error_tag f, :username %>
+      </div>
+      <div class="u-spacingSmall"></div>
+
+      <%= label f, :password, class: "control-label" %>
+      <div>
+        <%= password_input f, :password, class: "TextInput" %>
+        <%= error_tag f, :password %>
+      </div>
+      <div class="u-spacingSmall"></div>
+
+      <%= submit "Sign in", class: "Button" %>
+    <% end %>
+
+    <div class="u-spacingRegular"></div>
+    <%= link "Create an account", to: user_path(@conn, :new) %>
+  </div>
+</div>

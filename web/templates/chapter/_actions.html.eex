@@ -1,0 +1,4 @@
+<div class="Navigation">
+  <%= previous_chapter(@conn, @chapter_id, @last_chapter_id, @manga_id) %>
+  <%= next_chapter(@conn, @chapter_id, @last_chapter_id, @manga_id) %>
+</div>

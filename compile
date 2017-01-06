@@ -1,0 +1,2 @@
+npm run build
+MIX_ENV=prod mix phoenix.digest

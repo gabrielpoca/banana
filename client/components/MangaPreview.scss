@@ -1,0 +1,45 @@
+.MangaPreview {
+  display: flex;
+  justify-content: flex-start;
+  text-decoration: none;
+  width: 100%;
+
+  &:hover {
+    .MangaPreview-cover {
+      transform: scale(1.05);
+    }
+  }
+
+  @include media('>=tablet') {
+    flex-direction: column;
+  }
+}
+
+.MangaPreview-cover {
+  display: flex;
+  transition: all .2s ease-in-out;
+
+  @include media('>=tablet') {
+    margin-bottom: $spacing-small;
+  }
+}
+
+.MangaPreview-name {
+}
+
+.MangaPreview-chapter {
+  color: rgba($color-black, .6);
+  font-size: $font-size-xsmall;
+
+  @include media('>=tablet') {
+    font-size: $font-size-small;
+  }
+}
+
+.MangaPreview-details {
+  margin-left: $spacing-small;
+
+  @include media('>=tablet') {
+    margin-left: 0;
+  }
+}

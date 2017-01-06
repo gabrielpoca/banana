@@ -1,0 +1,26 @@
+{
+  "name": "banana",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Gabriel Poça <gabrielpoca@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack --watch",
+    "build": "webpack -p --progress"
+  },
+  "dependencies": {
+    "autoprefixer-loader": "^3.2.0",
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "2.0.0-beta.4",
+    "include-media": "^1.4.9",
+    "medium-zoom": "^0.1.1",
+    "node-sass": "^4.2.0",
+    "sass-loader": "^4.1.1",
+    "style-loader": "^0.13.1",
+    "svg-url-loader": "^1.1.0",
+    "webpack": "2.2.0-rc.3"
+  }
+}

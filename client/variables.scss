@@ -1,0 +1,29 @@
+$max-width: 1024px;
+
+$spacing-xsmall: 10px;
+$spacing-small: 20px;
+$spacing-regular: 40px;
+$spacing-large: 80px;
+
+$color-black: #383945;
+
+$font-size-xsmall: 14px;
+$font-size-small: 16px;
+$font-size-regular: 20px;
+$font-size-large: 24px;
+
+html {
+  --font-size-small: $font-size-xsmall;
+  --font-size: $font-size-small;
+  --spacing-regular: $spacing-small;
+  --spacing-large: $spacing-regular;
+  --spacing-small: $spacing-xsmall;
+
+  @include media('>=tablet') {
+    --font-size-small: $font-size-small;
+    --font-size: $font-size-regular;
+    --spacing-regular: $spacing-regular;
+    --spacing-large: $spacing-large;
+    --spacing-small: $spacing-small;
+  }
+}

@@ -1,0 +1,73 @@
+.Link {
+  text-decoration: none;
+}
+
+.Link--forward {
+  position: relative;
+  padding-right: 20px;
+
+  &::before,
+  &::after {
+    background: currentColor;
+    content: '';
+    height: 2px;
+    position: absolute;
+    right: 0;
+    width: 10px;
+  }
+
+  &::before {
+    top: 8px;
+    transform: translateY(calc(-50% + 2px)) rotate(45deg);
+  }
+
+  &::after {
+    top: 14px;
+    transform: translateY(calc(-50% + 2px)) rotate(-45deg);
+  }
+
+  @include media('>=tablet') {
+    &::before {
+      transform: translateY(calc(-50% + 6px)) rotate(45deg);
+    }
+
+    &::after {
+      transform: translateY(calc(-50% + 6px)) rotate(-45deg);
+    }
+  }
+}
+
+.Link--backward {
+  position: relative;
+  padding-left: 20px;
+
+  &::before,
+  &::after {
+    background: currentColor;
+    content: '';
+    height: 2px;
+    position: absolute;
+    left: 0;
+    width: 10px;
+  }
+
+  &::before {
+    top: 8px;
+    transform: translateY(calc(-50% + 2px)) rotate(-45deg);
+  }
+
+  &::after {
+    top: 14px;
+    transform: translateY(calc(-50% + 2px)) rotate(45deg);
+  }
+
+  @include media('>=tablet') {
+    &::before {
+      transform: translateY(calc(-50% + 6px)) rotate(-45deg);
+    }
+
+    &::after {
+      transform: translateY(calc(-50% + 6px)) rotate(45deg);
+    }
+  }
+}

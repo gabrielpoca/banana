@@ -1,0 +1,41 @@
+<div class="ChapterPage">
+  <div class="ChapterPage-title">
+    <h1 class="Heading Heading--white">Chapter <%= @chapter_id %>: <%= @chapter["name"] %></h1>
+  </div>
+
+  <div class="ChapterPage-actions">
+    <%= render Banana.ChapterView, "_actions.html",
+      chapter_id: @chapter_id,
+      last_chapter_id: @last_chapter_id,
+      manga_id: @manga_id,
+      conn: @conn
+    %>
+  </div>
+
+  <ol class="ChapterPage-pages">
+    <%= for page <- not_deferred_pages(@chapter) do %>
+      <li class="ChapterPage-page">
+        <img class="ChapterPage-image" src="<%= page["url"] %>" />
+      </li>
+    <% end %>
+
+    <%= for page <- deferred_pages(@chapter) do %>
+      <li class="ChapterPage-page">
+        <img
+          class="ChapterPage-image"
+          src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          data-src="<%= page["url"] %>"
+        />
+      </li>
+    <% end %>
+  </ol>
+
+  <div class="ChapterPage-actions">
+    <%= render Banana.ChapterView, "_actions.html",
+      chapter_id: @chapter_id,
+      last_chapter_id: @last_chapter_id,
+      manga_id: @manga_id,
+      conn: @conn
+    %>
+  </div>
+</div>

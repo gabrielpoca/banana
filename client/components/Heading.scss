@@ -1,0 +1,18 @@
+.Heading {
+  border-bottom: 1px solid lighten($color-black, 50%);
+
+  &, h1, h2, h3, h4 {
+    color: $color-black;
+    font-size: $font-size-regular;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    @include media('>tablet') {
+      font-size: $font-size-large;
+    }
+  }
+}
+
+.Heading--white {
+  color: white;
+}

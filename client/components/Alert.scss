@@ -1,0 +1,15 @@
+.Alert,
+.Alert--info {
+  background: #F4F5F7;
+}
+
+.Alert-content {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: $spacing-small /2 $spacing-regular;
+}
+
+.Alert--error {
+  background-color: #e84660;
+  color: white;
+}

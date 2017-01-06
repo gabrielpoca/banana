@@ -1,0 +1,45 @@
+<div class="ContainedContent">
+  <div class="ContainedContent-content">
+    <div class="MangaListPage">
+      <div class="MangaListPage-search">
+        <%= form_for @conn, manga_path(@conn, :index), [as: :manga, method: :get, class: "Search"], fn f -> %>
+          <%= text_input f, :q, class: "Search-input", placeholder: "Search for a title" %>
+          <div class="Search-button">
+            <%= submit "Search", class: "Button" %>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="MangaListPage-title">
+        <h1 class="Heading">Manga</h1>
+      </div>
+
+      <div class="MangaListPage-mangas">
+        <ol class="MangasList">
+          <%= for manga <- @mangas do %>
+            <li class="MangasList-item">
+              <%= link to: manga_path(@conn, :show, manga["mangaId"]), class: "MangaPreview" do %>
+                <div class="MangaPreview-cover">
+                  <img class="Cover Cover--small" src="<%= manga["cover"] %>" />
+                </div>
+                <div class="MangaPreview-details">
+                  <div class="MangaPreview-name"><%= manga["name"] %></div>
+                  <span class="MangaPreview-chapter">
+                    <%= chapter_for_manga(@mangas_chapter, manga["mangaId"]) %>
+                  </span>
+                </div>
+              <% end %>
+            </li>
+          <% end %>
+        </ol>
+      </div>
+
+      <div class="MangaListPage-navigation">
+        <div class="Navigation">
+          <%= previous_page(@conn, @page_number, @page_size, @total_pages) %>
+          <%= next_page(@conn, @page_number, @page_size, @total_pages) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

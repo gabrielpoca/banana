@@ -1,0 +1,7 @@
+<div class="ContainedContent">
+  <div class="ContainedContent-content">
+    <div class="u-spacingLarge"></div>
+    <h1>Something went wrong. Please try again.</h1>
+    <p><%= @message %></p>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="ContainedContent">
+  <div class="ContainedContent-content">
+    <div class="MangaPage">
+      <div class="MangaPage-search">
+        <%= form_for @conn, manga_path(@conn, :index), [as: :manga, method: :get, class: "Search"], fn f -> %>
+          <%= text_input f, :q, class: "Search-input", placeholder: "Search for a title" %>
+          <div class="Search-button">
+            <%= submit "Search", class: "Button" %>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="MangaPage-title">
+        <h1 class="Heading"><%= @manga["name"] %></h1>
+      </div>
+
+      <div class="ChapterMedia">
+        <div class="ChapterMedia-image">
+          <img src="<%= @manga["cover"] %>" class="Cover Cover--big" />
+          <div class="u-spacingSmall"></div>
+          <%= if @last_read_chapter do %>
+            <%= link "Chapter #{@last_read_chapter.chapter}", to: manga_chapter_path(@conn, :show, @manga_id, @last_read_chapter.chapter), class: "Button Button--fullWidth" %>
+          <% else %>
+            <%= link "Start", to: manga_chapter_path(@conn, :show, @manga_id, 1), class: "Button Button--fullWidth" %>
+          <% end %>
+        </div>
+        <div class="ChapterMedia-details">
+          <ol class="ChapterList">
+            <%= for chapter <- @manga["chapters"] do %>
+              <li class="ChapterList-item<%= if read_chapter(@read_chapters, chapter), do: '--read' %>">
+                <%= link chapter_name(chapter), to: manga_chapter_path(@conn, :show, @manga_id, chapter["chapterId"]), class: "ChapterList-link" %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
