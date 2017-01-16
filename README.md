@@ -31,10 +31,12 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 New Features
 ------------
 
-This is what I'm planning to do next:
+This is what I'm planning to do next (in no particular order): 
 
+- [ ] Logo.
 - [ ] Favorite mangas.
 - [ ] Notification for new chapters.
 - [ ] Option to register an email.
 - [ ] Add CI.
 - [ ] Add button to deploy to Heroku.
+- [ ] Landing page.
