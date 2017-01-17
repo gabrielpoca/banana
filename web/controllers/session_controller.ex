@@ -24,7 +24,6 @@ defmodule Banana.SessionController do
 
   def delete(conn, _params) do
     Guardian.Plug.sign_out(conn)
-    |> put_flash(:info, "Logged out successfully")
     |> redirect(to: session_path(conn, :new))
   end
 end

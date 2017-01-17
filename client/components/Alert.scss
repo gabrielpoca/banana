@@ -1,12 +1,14 @@
 .Alert,
 .Alert--info {
+  @include window-spacing;
   background: #F4F5F7;
+  padding-top: $spacing-xsmall;
+  padding-bottom: $spacing-xsmall;
 }
 
 .Alert-content {
   max-width: $max-width;
   margin: 0 auto;
-  padding: $spacing-small /2 $spacing-regular;
 }
 
 .Alert--error {
