@@ -12,7 +12,7 @@
   padding-left: $spacing-regular / 2;
 
   &::placeholder {
-    color: lighten($color-black, 40%);
+    color: lighten($color-gray, 40%);
   }
 
   @include media('>=tablet') {
