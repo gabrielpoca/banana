@@ -14,17 +14,19 @@
 
   <body class="App <%= assigns[:app_modifier] %>">
     <div class="App-content">
-      <header class="Nav">
-        <div class="Nav-content">
-          <%= link "Decent Manga Reader", to: manga_path(@conn, :index), class: "Nav-brand" %>
-          <nav role="navigation" class="Nav-links">
-            <%= if current_user(@conn) != nil do %>
-              <span><%= current_user(@conn).username %></span>
-              &nbsp;
-              <%= link "(logout)", to: session_path(@conn, :delete), method: :delete %>
-            <% end %>
-          </nav>
-        </div>
+      <%= if !assigns[:hide_nav] do %>
+        <header class="Nav">
+          <div class="Nav-content">
+            <%= link "Decent Manga Reader", to: manga_path(@conn, :index), class: "Nav-brand" %>
+            <nav role="navigation" class="Nav-links">
+              <%= if current_user(@conn) != nil do %>
+                <span><%= current_user(@conn).username %></span>
+                &nbsp;
+                <%= link "(logout)", to: session_path(@conn, :delete), method: :delete %>
+              <% end %>
+            </nav>
+          </div>
+        <% end %>
       </header>
 
       <%= if get_flash(@conn, :info) do %>

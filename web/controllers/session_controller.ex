@@ -9,6 +9,7 @@ defmodule Banana.SessionController do
 
     conn
     |> assign(:app_modifier, "App--dark")
+    |> assign(:hide_nav, true)
     |> render "new.html", changeset: changeset
   end
 
