@@ -6,7 +6,10 @@ defmodule Banana.SessionController do
 
   def new(conn, _params) do
     changeset = User.changeset(%User{})
-    render conn, "new.html", changeset: changeset
+
+    conn
+    |> assign(:app_modifier, "App--dark")
+    |> render "new.html", changeset: changeset
   end
 
   def create(conn, %{"user" => %{"username" => username, "password" => password}} = params) do

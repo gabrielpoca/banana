@@ -1,28 +1,45 @@
-<div class="ContainedContent">
-  <div class="ContainedContent-content">
-    <div class="u-spacingLarge"></div>
-    <h2 class="Heading">Login</h2>
-    <div class="u-spacingRegular"></div>
+<div class="RegisterPage">
+  <div class="RegisterPage-child">
+    <div class="RegisterPage-content">
+      <span class="RegisterPage-dummy"></span>
 
-    <%= form_for @changeset, session_path(@conn, :create), fn f -> %>
-      <%= label f, :username, class: "control-label" %>
-      <div>
-        <%= text_input f, :username, class: "TextInput" %>
-        <%= error_tag f, :username %>
+      <div class="RegisterPage-form">
+        <%= form_for @changeset, session_path(@conn, :create), [class: "RegisterForm"], fn f -> %>
+          <%= label f, :username, class: "RegisterForm-label" %>
+          <div class="RegisterForm-input">
+            <%= text_input f, :username, class: "TextInput" %>
+            <%= error_tag f, :username %>
+          </div>
+
+          <%= label f, :password, class: "RegisterForm-label" %>
+          <div class="RegisterForm-input">
+            <%= password_input f, :password, class: "TextInput" %>
+            <%= error_tag f, :password %>
+          </div>
+
+          <p class="RegisterForm-information">
+            If you lose your username or password we cannot recover it.
+            You’ll have to create a new account.
+          </p>
+
+          <div class="RegisterForm-submit">
+            <%= submit "Sign in", class: "Button Button--green" %>
+          </div>
+        <% end %>
       </div>
-      <div class="u-spacingSmall"></div>
 
-      <%= label f, :password, class: "control-label" %>
-      <div>
-        <%= password_input f, :password, class: "TextInput" %>
-        <%= error_tag f, :password %>
+      <div class="RegisterPage-about">
+        <h2>About</h2>
+        <div class="u-spacingSmall"></div>
+        <p>
+          This application provides a decent, online manga reading experience.
+          There are no social features, data-mining or ads.
+          You can find the source code for this application on GitHub.
+        </p>
+        <p>
+          Sometimes the application can be slow, please be patient.
+        </p>
       </div>
-      <div class="u-spacingSmall"></div>
-
-      <%= submit "Sign in", class: "Button" %>
-    <% end %>
-
-    <div class="u-spacingRegular"></div>
-    <%= link "Create an account", to: user_path(@conn, :new) %>
+    </div>
   </div>
 </div>

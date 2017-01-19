@@ -22,11 +22,9 @@
               <span><%= current_user(@conn).username %></span>
               &nbsp;
               <%= link "(logout)", to: session_path(@conn, :delete), method: :delete %>
-            <% else %>
-              <%= link "Sign in", to: session_path(@conn, :new) %>
             <% end %>
           </nav>
-          </div>
+        </div>
       </header>
 
       <%= if get_flash(@conn, :info) do %>

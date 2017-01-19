@@ -20,6 +20,10 @@ a {
 }
 
 input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px var(--background-color) inset;
-  -webkit-text-fill-color: --var(--text-color) !important;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  -webkit-text-fill-color: var(--text-color) !important;
+}
+
+p {
+  color: var(--text-color);
 }

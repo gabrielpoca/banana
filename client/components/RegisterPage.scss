@@ -1,0 +1,37 @@
+.RegisterPage {
+  @include window-spacing;
+}
+
+.RegisterPage-child {
+  margin: 0 auto;
+  max-width: $max-width;
+}
+
+.RegisterPage-content {
+  display: flex;
+  justify-content: center;
+  margin-top: $spacing-large;
+}
+
+.RegisterPage-form {
+  flex-basis: 400px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.RegisterPage-about {
+  flex-basis: 0;
+  flex-grow: 1;
+  font-size: var(--font-size-small);
+  margin-left: $spacing-regular;
+}
+
+.RegisterPage-dummy {
+  display: none;
+  flex-basis: 0;
+  flex-grow: 1;
+
+  @include media('>=tablet') {
+    display: block;
+  }
+}
