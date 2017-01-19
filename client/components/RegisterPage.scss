@@ -1,0 +1,56 @@
+.RegisterPage {
+  @include window-spacing;
+}
+
+.RegisterPage-child {
+  margin: $spacing-large * 2 auto $spacing-large * 3;;
+  max-width: $max-width;
+}
+
+.RegisterPage-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: $spacing-regular;
+
+  @include media('>=tablet') {
+    flex-direction: row;
+    margin-top: $spacing-large;
+  }
+}
+
+.RegisterPage-form {
+  max-width: 400px;
+
+  @include media('>=tablet') {
+    flex-basis: 400px;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+}
+
+.RegisterPage-about {
+  margin-bottom: $spacing-regular;
+  margin-top: $spacing-regular;
+  max-width: 400px;
+
+  @include media('>=tablet') {
+    flex-basis: 0;
+    flex-grow: 1;
+    font-size: var(--font-size-small);
+    margin-bottom: 0;
+    margin-left: $spacing-regular;
+    margin-top: 0;
+  }
+}
+
+.RegisterPage-dummy {
+  display: none;
+  flex-basis: 0;
+  flex-grow: 1;
+
+  @include media('>desktop') {
+    display: block;
+  }
+}

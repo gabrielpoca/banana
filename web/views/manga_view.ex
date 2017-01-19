@@ -1,11 +1,7 @@
 defmodule Banana.MangaView do
   use Banana.Web, :view
 
-  @page_offset 2
-
-  alias Banana.Chapter
-
-  def previous_page(conn, page_number, page_size, total_pages) do
+  def previous_page(conn, page_number, page_size) do
     if page_number > 1 do
       link "Previous Page", to: manga_path(conn, :index, page: page_number - 1, page_size: page_size), class: "Button"
     else

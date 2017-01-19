@@ -1,4 +1,6 @@
 .App {
+  --text-color: $color-text;
+
   background-color: var(--background-color);
   color: var(--text-color);
   display: flex;
@@ -17,5 +19,5 @@
 
 .App--dark {
   --background-color: $color-black;
-  --text-color: white;
+  --text-color: rgba(white, .6);
 }

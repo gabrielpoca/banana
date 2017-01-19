@@ -1,6 +1,6 @@
 <div class="ChapterPage">
   <div class="ChapterPage-title">
-    <h1 class="Heading Heading--white">Chapter <%= @chapter_id %>: <%= @chapter["name"] %></h1>
+    <h1 class="Heading">Chapter <%= @chapter_id %>: <%= @chapter["name"] %></h1>
   </div>
 
   <div class="ChapterPage-actions">

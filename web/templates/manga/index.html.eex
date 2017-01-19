@@ -36,7 +36,7 @@
 
       <div class="MangaListPage-navigation">
         <div class="Navigation">
-          <%= previous_page(@conn, @page_number, @page_size, @total_pages) %>
+          <%= previous_page(@conn, @page_number, @page_size) %>
           <%= next_page(@conn, @page_number, @page_size, @total_pages) %>
         </div>
       </div>
