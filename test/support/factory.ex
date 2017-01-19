@@ -6,7 +6,7 @@ defmodule Banana.Factory do
   def user_factory do
     %User{
       username: sequence("username"),
-      encrypted_password: "some password"
+      encrypted_password: "somepassword"
     }
   end
 

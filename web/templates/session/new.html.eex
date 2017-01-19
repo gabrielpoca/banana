@@ -23,7 +23,7 @@
           </p>
 
           <div class="RegisterForm-submit">
-            <%= submit "Sign in", class: "Button Button--green" %>
+            <%= submit "Enter", class: "Button Button--green" %>
           </div>
         <% end %>
       </div>
@@ -38,7 +38,7 @@
         </p>
         <div class="u-spacingSmall"></div>
         <p>
-          Sometimes the application can be slow, please be patient.
+          Sometimes the application can be slow; please be patient.
         </p>
       </div>
     </div>

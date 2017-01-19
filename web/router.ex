@@ -16,7 +16,6 @@ defmodule Banana.Router do
 
   scope "/", Banana do
     pipe_through :browser
-    resources "/users", UserController
     resources "/session", SessionController, only: [:new, :create], singleton: true
   end
 
