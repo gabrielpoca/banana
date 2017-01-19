@@ -1,6 +1,4 @@
 defmodule Manga.FakeAPI do
-  import Manga.Constants
-
   def all do
     json = File.read!("test/support/manga/all.json") |> Poison.decode!
     {:ok, json}

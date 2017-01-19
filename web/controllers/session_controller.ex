@@ -10,10 +10,10 @@ defmodule Banana.SessionController do
     conn
     |> assign(:app_modifier, "App--dark")
     |> assign(:hide_nav, true)
-    |> render "new.html", changeset: changeset
+    |> render("new.html", changeset: changeset)
   end
 
-  def create(conn, %{"user" => %{"username" => username, "password" => password}} = params) do
+  def create(conn, %{"user" => %{"username" => username, "password" => password}} = _params) do
     case find_or_create_user(username, password) do
       {:ok, user} ->
         conn

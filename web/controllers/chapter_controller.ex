@@ -1,7 +1,7 @@
 defmodule Banana.ChapterController do
   use Banana.Web, :authenticated_controller
 
-  alias Banana.{User, TrackChapter, Repo, Chapter}
+  alias Banana.TrackChapter
   alias Manga.{Client, Manga}
 
   @chapter_error "We cannot find this chapter. Please try again or report to the administrator"
@@ -14,14 +14,13 @@ defmodule Banana.ChapterController do
 
       conn
       |> assign(:app_modifier, "App--dark")
-      |> render "show.html",
+      |> render("show.html",
         chapter: chapter,
         chapter_id: Integer.parse(chapter_id) |> elem(0),
         last_chapter_id: last_chapter,
-        manga_id: manga_id
+        manga_id: manga_id)
     else
-      a ->
-        render(conn, "error.html", message: @chapter_error)
+      _ -> render(conn, "error.html", message: @chapter_error)
     end
   end
 end
