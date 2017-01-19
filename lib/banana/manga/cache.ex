@@ -13,7 +13,7 @@ defmodule Manga.Cache do
   end
 
   def set(url, value) do
-    GenServer.call(__MODULE__, {:set, url, value})
+    GenServer.cast(__MODULE__, {:set, url, value})
   end
 
   def reset do
@@ -32,10 +32,10 @@ defmodule Manga.Cache do
     {:reply, result, state}
   end
 
-  def handle_call({:set, url, value}, _from, state) do
+  def handle_cast({:set, url, value}, state) do
     %{ets_table_name: ets_table_name} = state
     true = :ets.insert(ets_table_name, {url, value})
-    {:reply, value, state}
+    {:noreply, state}
   end
 
   def init(ets_table_name) do

@@ -1,5 +1,6 @@
 Banana
 ======
+[![Build Status](https://semaphoreci.com/api/v1/gabrielpoca/banana/branches/master/shields_badge.svg)](https://semaphoreci.com/gabrielpoca/banana)
 
 [Online app](http://decent-manga-reader.herokuapp.com/)
 
