@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hello Banana!</title>
+    <title>Manga Reader</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   </head>
@@ -17,7 +17,7 @@
       <%= if !assigns[:hide_nav] do %>
         <header class="Nav">
           <div class="Nav-content">
-            <%= link "Decent Manga Reader", to: manga_path(@conn, :index), class: "Nav-brand" %>
+            <%= link "Manga Reader", to: manga_path(@conn, :index), class: "Nav-brand" %>
             <nav role="navigation" class="Nav-links">
               <%= if current_user(@conn) != nil do %>
                 <span><%= current_user(@conn).username %></span>

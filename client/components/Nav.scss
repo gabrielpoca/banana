@@ -3,8 +3,8 @@
 
   align-items: center;
   display: flex;
-  padding-top: var(--spacing-regular);
-  padding-bottom: var(--spacing-regular);
+  padding-top: var(--spacing-small);
+  padding-bottom: var(--spacing-small);
 }
 
 .Nav-content {
@@ -23,4 +23,5 @@
 
 .Nav-links {
   display: flex;
+  font-size: var(--font-size-small);
 }

@@ -4,6 +4,7 @@ $spacing-xsmall: 10px;
 $spacing-small: 20px;
 $spacing-regular: 40px;
 $spacing-large: 80px;
+$spacing-xlarge: 160px;
 
 $color-text: #484847;
 $color-gray: #383945;
@@ -19,6 +20,7 @@ html {
   --font-size: $font-size-small;
   --spacing-regular: $spacing-small;
   --spacing-large: $spacing-regular;
+  --spacing-xlarge: $spacing-large;
   --spacing-small: $spacing-xsmall;
 
   @include media('>=tablet') {
@@ -26,6 +28,7 @@ html {
     --font-size: $font-size-regular;
     --spacing-regular: $spacing-regular;
     --spacing-large: $spacing-large;
+    --spacing-xlarge: $spacing-xlarge;
     --spacing-small: $spacing-small;
   }
 }

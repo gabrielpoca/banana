@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   list-style-type: none;
+  margin-bottom: $spacing-regular;
 }
 
 .ChapterPage-page {
@@ -18,8 +19,12 @@
   margin: 0 var(--spacing-regular) var(--spacing-large);
 }
 
+.ChapterPage-chapter {
+  margin: var(--spacing-xlarge) var(--spacing-regular) 0;
+}
+
 .ChapterPage-title {
-  margin: var(--spacing-large) var(--spacing-regular) $spacing-small;
+  margin: 0 var(--spacing-regular) var(--spacing-xlarge);
 }
 
 .ChapterPage-image {
