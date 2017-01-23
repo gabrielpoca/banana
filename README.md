@@ -2,8 +2,6 @@ Banana
 ======
 [![Build Status](https://semaphoreci.com/api/v1/gabrielpoca/banana/branches/master/shields_badge.svg)](https://semaphoreci.com/gabrielpoca/banana)
 
-[Online app](http://decent-manga-reader.herokuapp.com/)
-
 Banana is an application to read manga that matches my expectations of a decent,
 online manga reader. Most applications I've been using over the years always
 fail to provide a good reading experience.
@@ -29,15 +27,9 @@ In production, the key will be read from the environment variable `MANGA_API_KEY
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-New Features
-------------
+Production
+----------
 
-This is what I'm planning to do next (in no particular order): 
-
-- [ ] Logo.
-- [ ] Favorite mangas.
-- [ ] Notification for new chapters.
-- [ ] Option to register an email.
-- [ ] Add CI.
-- [ ] Add button to deploy to Heroku.
-- [ ] Landing page.
+Basic auth is enabled for production. You need to define the environment
+variables `AUTH_USERNAME` and `AUTH_PASSWORD`. You should use the production key
+from Mashape instead of the test key setup in development.

@@ -17,7 +17,7 @@ config :banana, Banana.Endpoint,
   force_ssl: [rewrite_on: [:x_forwarded_proto]],
   http: [port: {:system, "PORT"}],
   secret_key_base: System.get_env("SECRET_KEY_BASE"),
-  url: [scheme: "https", host: "decent-manga-reader.herokuapp.com", port: 443]
+  url: [scheme: "https", host: System.get_env("DOMAIN"), port: 443]
 
 config :logger, level: :info
 
@@ -33,6 +33,12 @@ config :banana, Manga.Client,
 
 config :guardian, Guardian,
   secret_key: System.get_env("GUARDIAN_SECRET_KEY")
+
+config :banana, auth: [
+  username: {:system, "AUTH_USERNAME"},
+  password: {:system, "AUTH_PASSWORD"},
+  realm: "App"
+]
 
 # ## SSL Support
 #

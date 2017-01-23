@@ -2,6 +2,10 @@ defmodule Banana.Router do
   use Banana.Web, :router
 
   pipeline :browser do
+    if Mix.env == :prod do
+      plug BasicAuth, use_config: {:banana, :auth}
+    end
+
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_flash

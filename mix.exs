@@ -38,6 +38,7 @@ defmodule Banana.Mixfile do
      {:phoenix_ecto, "~> 3.0"},
      {:ex_machina, "~> 1.0", only: [:test]},
      {:credo, "~> 0.5", only: [:dev, :test]},
+     {:basic_auth, "~> 2.0.0"},
      {:postgrex, ">= 0.0.0"},
      {:phoenix_html, "~> 2.6"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
