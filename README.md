@@ -2,34 +2,45 @@ Banana
 ======
 [![Build Status](https://semaphoreci.com/api/v1/gabrielpoca/banana/branches/master/shields_badge.svg)](https://semaphoreci.com/gabrielpoca/banana)
 
-Banana is an application to read manga that matches my expectations of a decent,
-online manga reader. Most applications I've been using over the years always
-fail to provide a good reading experience.
+Banana is a self-hosted manga reader. It meets my expectations of what
+a decent, online manga reader should look like. Most applications I've been
+using over the years always fail to provide a good reading experience.
 
-Banana is build using [Phoenix](http://www.phoenixframework.org/) and the [Manga
-Scraper API](https://market.mashape.com/doodle/manga-scraper).
+Banana is built with [Phoenix](http://www.phoenixframework.org/) and the
+[Manga Scraper API](https://market.mashape.com/doodle/manga-scraper).
 
 Development
 -----------
 
-**Setup:**
+### Application dependencies
 
-To setup this application you need an account in [Mashape marketplace](https://market.mashape.com/). Create your account and create an application inside it. Add the [Manga Scraper api](https://market.mashape.com/doodle/manga-scraper) to your application. Take the application's test key and put it in `config/dev.secret.exs` (there is sample file in the config folder).
+Before anything else, make sure that you have the following installed:
 
-In production, the key will be read from the environment variable `MANGA_API_KEY`. See `config/prod.exs` for more details.
+* [Elixir](http://elixir-lang.org/install.html)
+* [PostgreSQL](https://www.postgresql.org/download/)
+* [NodeJS](https://nodejs.org/en/download/)
 
-**Running:**
+### Setup
 
-* Install dependencies with `mix deps.get`
-* Create and migrate your database * with `mix ecto.create && mix ecto.migrate`
+To set up this application you need an account in [Mashape
+marketplace](https://market.mashape.com/). Create your account and create an
+application inside it. Add the [Manga Scraper
+api](https://market.mashape.com/doodle/manga-scraper) to your application. Take
+the application's test key and put it in `config/dev.secret.exs` (there is
+sample file in the config folder). In production, the key will be read from the environment variable `MANGA_API_KEY`. See `config/prod.exs` for more details.
+
+In development, the username and password for PostgreSQL will be read from the environment variables `DB_USERNAME` and `DB_PASSWORD`.
+
+After, install the dependencies with `mix deps.get`. Create and migrate your database with `mix ecto.create && mix ecto.migrate`. Install node dependencies with `npm install`.
+
+### Run
+
 * Run the tests with `mix test`
-* Start Phoenix endpoint with `mix phoenix.server`
-
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+* Start Phoenix endpoint with `mix phoenix.server`. Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 Production
 ----------
 
-Basic auth is enabled for production. You need to define the environment
-variables `AUTH_USERNAME` and `AUTH_PASSWORD`. You should use the production key
-from Mashape instead of the test key setup in development.
+Basic auth is enabled in production. You need to define the environment
+variables `AUTH_USERNAME` and `AUTH_PASSWORD`. You should also use the
+production key from Mashape instead of the test key setup in development.
