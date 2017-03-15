@@ -1,0 +1,37 @@
+{
+  "name": "banana",
+  "scripts": {
+    "postdeploy": "mix ecto.migrate"
+  },
+  "env": {
+    "SECRET_KEY_BASE": {
+      "generator": "secret"
+    },
+    "GUARDIAN_SECRET_KEY": {
+      "generator": "secret"
+    },
+    "AUTH_PASSWORD": {
+      "required": true
+    },
+    "AUTH_USERNAME": {
+      "required": true
+    },
+    "DOMAIN": {
+      "required": true
+    },
+    "MANGA_API_KEY": {
+      "required": true
+    }
+  },
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/HashNuke/heroku-buildpack-elixir.git"
+    },
+    {
+      "url": "https://github.com/gjaldon/heroku-buildpack-phoenix-static.git"
+    }
+  ]
+}

@@ -44,3 +44,8 @@ Production
 Basic auth is enabled in production. You need to define the environment
 variables `AUTH_USERNAME` and `AUTH_PASSWORD`. You should also use the
 production key from Mashape instead of the test key setup in development.
+Finally, you need an environment variable `HOST` with your application's domain.
+
+If you are going to use Heroku, just click the button:
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
