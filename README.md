@@ -49,3 +49,10 @@ Finally, you need an environment variable `HOST` with your application's domain.
 If you are going to use Heroku, just click the button:
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+Screenshots
+-----------
+
+![Screenshot of the login interface](./screenshots/login.jpg)
+![Screenshot of the search interface](./screenshots/search.jpg)
+![Screenshot of the reading interface](./screenshots/reader.jpg)
