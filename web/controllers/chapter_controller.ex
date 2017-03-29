@@ -7,7 +7,7 @@ defmodule Banana.ChapterController do
   @chapter_error "We cannot find this chapter. Please try again or report to the administrator"
 
   def show(conn, %{"manga_id" => manga_id, "id" => chapter_id}, current_user, _claims) do
-    with {:ok, manga} <- Client.get(manga_id),
+    with {:ok, manga} <- Client.manga(manga_id),
          last_chapter <- Manga.last_chapter(manga),
          {:ok, chapter} <- Client.chapter(manga_id, chapter_id),
          {:ok} <- TrackChapter.call(manga_id, chapter_id, current_user.id) do

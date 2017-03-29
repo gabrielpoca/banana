@@ -14,7 +14,7 @@ defmodule MangaClient.API do
     end
   end
 
-  def manga_chapter(manga_id, chapter_id) do
+  def chapter(manga_id, chapter_id) do
     get(manga_chapter_url(manga_id, chapter_id))
   end
 

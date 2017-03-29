@@ -6,14 +6,14 @@ defmodule MangaClient.Client do
     request(key, fn () -> api().all() end)
   end
 
-  def get(manga_id) do
+  def manga(manga_id) do
     key = "manga_#{manga_id}"
     request(key, fn () -> api().manga(manga_id) end)
   end
 
   def chapter(manga, id) do
     key = "manga_chapter_#{manga}_#{id}"
-    request(key, fn () -> api().manga_chapter(manga, id) end)
+    request(key, fn () -> api().chapter(manga, id) end)
   end
 
   def search(query) do

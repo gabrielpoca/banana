@@ -12,7 +12,7 @@ defmodule MangaClient.MangaTest do
 
   describe "last_chapter" do
     test "returns the last chapter" do
-      {:ok, manga} = Client.get("naruto")
+      {:ok, manga} = Client.manga("naruto")
 
       assert Manga.last_chapter(manga) == 7
     end

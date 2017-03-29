@@ -26,7 +26,7 @@ defmodule Banana.MangaController do
   end
 
   def show(conn, %{"id" => manga_id}, current_user, _claims) do
-    case Client.get(manga_id) do
+    case Client.manga(manga_id) do
       {:ok, manga} ->
         render conn, "show.html",
           manga: manga,
