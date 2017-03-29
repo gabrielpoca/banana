@@ -1,7 +1,7 @@
 defmodule Banana.MangaController do
   use Banana.Web, :authenticated_controller
 
-  alias Manga.Client
+  alias MangaClient.Client
   alias Banana.{MangaLastChapter, Chapter, SortMangas}
 
   @manga_error "We cannot find this manga. Please try again or report to the administrator"

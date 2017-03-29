@@ -1,4 +1,4 @@
-defmodule Manga.Cache do
+defmodule MangaClient.Cache do
   use GenServer
 
   def start_link(opts \\ []) do

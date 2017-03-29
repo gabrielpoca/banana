@@ -1,4 +1,4 @@
-defmodule Manga.Supervisor do
+defmodule MangaClient.Supervisor do
   use Supervisor
 
   def start_link do
@@ -7,8 +7,8 @@ defmodule Manga.Supervisor do
 
   def init(:ok) do
     children = [
-      worker(Manga.Cache, [[name: Manga.Cache]]),
-      worker(Manga.CacheInvalidator, [])
+      worker(MangaClient.Cache, [[name: MangaClient.Cache]]),
+      worker(MangaClient.CacheInvalidator, [])
     ]
 
     supervise(children, strategy: :one_for_one)

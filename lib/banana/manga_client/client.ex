@@ -1,5 +1,5 @@
-defmodule Manga.Client do
-  alias Manga.Cache
+defmodule MangaClient.Client do
+  alias MangaClient.Cache
 
   def all do
     key = "manga"
@@ -38,6 +38,6 @@ defmodule Manga.Client do
   end
 
   defp api do
-    Application.get_env(:banana, Manga.Client)[:api]
+    Application.get_env(:banana, MangaClient.Client)[:api]
   end
 end

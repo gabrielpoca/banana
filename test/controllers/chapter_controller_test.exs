@@ -9,7 +9,7 @@ defmodule Banana.ChapterControllerTest do
   end
 
   test "show one chapter", %{conn: conn} do
-    {:ok, chapter} = Manga.Client.chapter("naruto", 1)
+    {:ok, chapter} = MangaClient.Client.chapter("naruto", 1)
 
     conn = get conn, manga_chapter_path(conn, :show, "naruto", 1)
 

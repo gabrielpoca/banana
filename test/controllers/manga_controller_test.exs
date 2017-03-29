@@ -11,7 +11,7 @@ defmodule Banana.MangaControllerTest do
 
   test "list all the mangas" do
     conn = guardian_login(insert(:user))
-    {:ok, mangas} = Manga.Client.all
+    {:ok, mangas} = MangaClient.Client.all
 
     conn = get conn, manga_path(conn, :index)
 
@@ -23,7 +23,7 @@ defmodule Banana.MangaControllerTest do
 
   test "show one manga" do
     conn = guardian_login(insert(:user))
-    {:ok, manga} = Manga.Client.get("naruto")
+    {:ok, manga} = MangaClient.Client.get("naruto")
 
     conn = get conn, manga_path(conn, :show, manga["href"])
 

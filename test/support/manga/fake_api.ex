@@ -1,4 +1,4 @@
-defmodule Manga.FakeAPI do
+defmodule MangaClient.FakeAPI do
   def all do
     json = File.read!("test/support/manga/all.json") |> Poison.decode!
     {:ok, json}

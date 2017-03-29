@@ -2,7 +2,7 @@ defmodule Banana.ChapterController do
   use Banana.Web, :authenticated_controller
 
   alias Banana.TrackChapter
-  alias Manga.{Client, Manga}
+  alias MangaClient.{Client, Manga}
 
   @chapter_error "We cannot find this chapter. Please try again or report to the administrator"
 

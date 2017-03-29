@@ -27,8 +27,8 @@ config :banana, Banana.Repo,
   ssl: true,
   url: System.get_env("DATABASE_URL")
 
-config :banana, Manga.Client,
-  api: Manga.API,
+config :banana, MangaClient.Client,
+  api: MangaClient.API,
   key: System.get_env("MANGA_API_KEY")
 
 config :guardian, Guardian,

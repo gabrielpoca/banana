@@ -14,7 +14,7 @@ defmodule Banana do
       supervisor(Banana.Endpoint, []),
       # Start your own worker by calling: Banana.Worker.start_link(arg1, arg2, arg3)
       # worker(Banana.Worker, [arg1, arg2, arg3]),
-      supervisor(Manga.Supervisor, []),
+      supervisor(MangaClient.Supervisor, []),
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html

@@ -1,5 +1,5 @@
-defmodule Manga.API do
-  import Manga.Constants
+defmodule MangaClient.API do
+  import MangaClient.Constants
 
   def all do
     get(all_url())
@@ -50,6 +50,6 @@ defmodule Manga.API do
   end
 
   defp headers do
-    ["X-Mashape-Key": Application.get_env(:banana, Manga.Client)[:key]]
+    ["X-Mashape-Key": Application.get_env(:banana, MangaClient.Client)[:key]]
   end
 end

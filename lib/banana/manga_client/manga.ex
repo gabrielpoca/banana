@@ -1,4 +1,4 @@
-defmodule Manga.Manga do
+defmodule MangaClient.Manga do
   def last_chapter(manga) do
     a = manga
     |> Map.get("chapters")

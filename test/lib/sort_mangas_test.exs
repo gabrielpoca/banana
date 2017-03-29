@@ -7,7 +7,7 @@ defmodule Banana.SortMangasTest do
   import Banana.Factory
 
   test "it sorts by the user's favorite mangas" do
-    {:ok, mangas} = Manga.Client.all()
+    {:ok, mangas} = MangaClient.Client.all()
     user = insert(:user)
     read_mangas = mangas |> Enum.shuffle |> Enum.take(4) |> Enum.map(&(Map.get(&1, "mangaId")))
     Enum.map(read_mangas, fn (manga) ->

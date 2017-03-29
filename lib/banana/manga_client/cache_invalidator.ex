@@ -1,7 +1,7 @@
-defmodule Manga.CacheInvalidator do
+defmodule MangaClient.CacheInvalidator do
   use GenServer
 
-  alias Manga.Cache
+  alias MangaClient.Cache
 
   def start_link do
     GenServer.start_link(__MODULE__, %{})

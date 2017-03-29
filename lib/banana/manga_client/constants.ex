@@ -1,4 +1,4 @@
-defmodule Manga.Constants do
+defmodule MangaClient.Constants do
   def all_url do
     "https://doodle-manga-scraper.p.mashape.com/mangareader.net?cover=1"
   end

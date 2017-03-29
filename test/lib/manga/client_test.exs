@@ -1,12 +1,12 @@
-defmodule Manga.ClientTest do
+defmodule MangaClient.ClientTest do
   use ExUnit.Case, async: true
 
-  alias Manga.Cache
-  alias Manga.Client
+  alias MangaClient.Cache
+  alias MangaClient.Client
 
   setup do
-    Supervisor.terminate_child(Banana.Supervisor, Manga.Supervisor)
-    Supervisor.restart_child(Banana.Supervisor, Manga.Supervisor)
+    Supervisor.terminate_child(Banana.Supervisor, MangaClient.Supervisor)
+    Supervisor.restart_child(Banana.Supervisor, MangaClient.Supervisor)
     :ok
   end
 

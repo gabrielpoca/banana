@@ -18,5 +18,5 @@ config :banana, Banana.Repo,
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
 
-config :banana, Manga.Client,
-  api: Manga.FakeAPI
+config :banana, MangaClient.Client,
+  api: MangaClient.FakeAPI

@@ -28,8 +28,8 @@ config :guardian, Guardian,
   secret_key: "eyJhbGciOiJIUzUxMiIsInR5cCI6",
   serializer: Banana.GuardianSerializer
 
-config :banana, Manga.Client,
-  api: Manga.API
+config :banana, MangaClient.Client,
+  api: MangaClient.API
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
