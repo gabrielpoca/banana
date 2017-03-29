@@ -3,7 +3,7 @@ defmodule Banana.MangaLastChapter do
 
   @primary_key false
 
-  schema "user_last_manga_chapters" do
+  schema "manga_last_chapter" do
     field :manga, :string
     field :chapter, :integer
     belongs_to :user, Banana.User
