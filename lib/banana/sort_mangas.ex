@@ -9,7 +9,7 @@ defmodule Banana.SortMangas do
 
   defp sort_by_chapters(sorted, [], _chapters), do: sorted
 
-  defp sort_by_chapters(sorted, [manga | mangas] = all, chapters) do
+  defp sort_by_chapters(sorted, [manga | mangas] = _, chapters) do
     if Enum.member?(chapters, manga["mangaId"]) do
       sort_by_chapters(sorted ++ [manga], mangas, chapters)
     else
