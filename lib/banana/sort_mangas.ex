@@ -1,6 +1,6 @@
 defmodule Banana.SortMangas do
 
-  alias Banana.{Repo, Chapter}
+  alias Banana.{Repo, ReadChapter}
   import Ecto.Query
 
   def call(mangas, user_id) do
@@ -18,7 +18,7 @@ defmodule Banana.SortMangas do
   end
 
   defp favorite_chapters(user_id) do
-    from(c in Chapter,
+    from(c in ReadChapter,
       select: c.manga,
       where: c.user_id == ^user_id,
       order_by: [desc: c.updated_at],

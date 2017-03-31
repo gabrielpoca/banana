@@ -1,7 +1,7 @@
-defmodule Banana.Chapter do
+defmodule Banana.ReadChapter do
   use Banana.Web, :model
 
-  schema "chapters" do
+  schema "read_chapters" do
     field :manga, :string
     field :chapter, :integer
     belongs_to :user, Banana.User
