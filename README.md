@@ -1,3 +1,5 @@
+This project was deprecated, use [this instead](https://github.com/gabrielpoca/manga).
+
 Banana
 ======
 [![Build Status](https://semaphoreci.com/api/v1/gabrielpoca/banana/branches/master/shields_badge.svg)](https://semaphoreci.com/gabrielpoca/banana)
